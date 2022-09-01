@@ -1,0 +1,16 @@
+
+.jumbotron {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/assets/laptop.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+  }
+
+
+.container {
+    text-align: center;
+    position: relative;
+    top: 30%;
+}
