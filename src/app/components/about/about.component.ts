@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
@@ -13,4 +14,5 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
   faLocationDot = faLocationDot;
+  faPen = faPen;
 }
