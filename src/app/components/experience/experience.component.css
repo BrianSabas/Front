@@ -2,24 +2,23 @@
     padding: 0;
     border: 2px solid #8d8d8d6b;
     border-radius: 2rem ;
-    width: 98%;
+    width: 97%;
     height: 500px;
 
 }
 
 .container-fluid {
-    border: 1px solid red;
     width: 100%;
     height: 50%;
 }
 
-.container-experience {
+.container-experience, .container-education {
     display: flex;
     flex-direction: column;
 
 }
 
-.h3-experience {
+.h2-experience, .h2-education {
     height: fit-content;
     margin-top: .5rem;
     display: flex;
@@ -27,18 +26,16 @@
 
 }
 
-.img-programmer {
+.img-programmer, .img-school {
     display: flex;  
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 }
 .image {
     display: flex;
     flex-direction: column;
 
-}
-.btns {
-    display: flex;
 }
 
 img {

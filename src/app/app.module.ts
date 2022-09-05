@@ -8,6 +8,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
     HeaderComponent,
     HeroComponent,
     AboutComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
