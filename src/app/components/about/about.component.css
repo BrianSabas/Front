@@ -27,8 +27,8 @@
 
 .container-md {
     float: right;
-    position: relative;
-    top: 3rem;
+    position: absolute;
+    top: 600px;
     right: 10px;
     width: 70%;
     height: 20vh;

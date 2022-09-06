@@ -1,10 +1,9 @@
 .container-xxl {
     height: 340px;
     width: 97%;
-    border: 1px red solid;
+    border: 2px #8d8d8d6b solid;
     border-radius: 2rem;
     margin-top: 2rem;
-    background-color: rgb(255, 220, 174);
 }
 
 .h2-title {
@@ -22,9 +21,33 @@
     max-width: 80%;
 }
 
+.progress {
+    box-shadow: 1px 2px 10px;
+}
+
 .progress-title {
     display: flex;
     justify-content: space-between;
+}
+
+.progress .progress-value {
+    width: 60px;
+    height: 20px;
+    font-size: 1rem;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #700cce;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #333;
+    border-top: none;
+    box-shadow: 0 1px 8px;
+    position: absolute;
+    right: 18rem;
+    margin-top: 38px;
+}
+
+.progressFirst {
+    margin-bottom: 1rem;
 }
 
 
