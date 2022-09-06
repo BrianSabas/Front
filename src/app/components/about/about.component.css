@@ -28,9 +28,9 @@
 .container-md {
     float: right;
     position: absolute;
-    top: 600px;
-    right: 10px;
-    width: 70%;
+    top: 97vh;
+    right: 14px;
+    width: 55vw;
     height: 20vh;
     border: 2px solid rgba(87, 87, 87, 0.267);
     border-radius: 15px;

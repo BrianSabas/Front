@@ -8,23 +8,23 @@
     <div class="container"> 
     <div class="projects-container first-project">
        <div class="link"> 
-        <a href="#">Microsoft</a>
+        <a href="#">{{portfolio.projects.firstProjectName}}</a>
             <div class="btns">
                 <button class="btn btn-pen"> <fa-icon [icon]="faPen"></fa-icon></button>
                 <button class="btn btn-trash"> <fa-icon [icon]="faTrash"></fa-icon></button>
             </div>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ea reprehenderit adipisci ipsa dolore laudantium ex debitis?</p>
+        <p>{{portfolio.projects.valueFirstProject}}</p>
     </div>
     <div class="projects-container second-project">
         <div class="link"> 
-         <a href="#">Google</a>
+            <a href="#">{{portfolio.projects.secondProjectName}}</a>
              <div class="btns">
                  <button class="btn btn-pen"> <fa-icon [icon]="faPen"></fa-icon></button>
                  <button class="btn btn-trash"> <fa-icon [icon]="faTrash"></fa-icon></button>
              </div>
          </div>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem ipsa unde perspiciatis aliquam minima tempora perferendis numquam! Consequatur, eius rerum! Impedit exercitationem dicta fugit quia nisi sint! Aspernatur, consequuntur?</p>
+         <p>{{portfolio.projects.valueSecondProject}}</p>
      </div>
     </div>
 </div>

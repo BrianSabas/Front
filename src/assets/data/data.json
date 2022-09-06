@@ -1,0 +1,28 @@
+{ 
+    "name": "Brian Sabaski",
+    "ubication": "Misiones (Argentina)",
+    "media": {
+        "logo-img": "../assets/wolf-icon.svg",
+        "hero-img": "../assets/laptop.jpeg",
+        "me": "../assets/me.jpg"
+    },
+    "about":"Estudiante de desarrollo web",
+    "experience":{
+        "programmer-img":"../assets/programmer.svg",
+        "position":"Full stack developer jr."
+    },
+    "education": {
+        "school-img":"../assets/school.svg",
+        "name":"Sipted",
+        "start":"2019",
+        "end":"2021"
+    },
+    "projects": {
+        "firstProjectName":"Microsoft",
+        "valueFirstProject":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ea reprehenderit adipisci ipsa dolore laudantium ex debitis?",
+        "secondProjectName":"Google",
+        "valueSecondProject":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem ipsa unde perspiciatis aliquam minima tempora perferendis numquam! Consequatur, eius rerum! Impedit exercitationem dicta fugit quia nisi sint! Aspernatur, consequuntur?"
+    }
+
+
+}

@@ -1,10 +1,10 @@
 <div class="container-xxl">
     <div class="card">
-        <img src="../../../assets/me.jpg" class="card-img-top" alt="...">
+        <img [src]="portfolio.media.me" class="card-img-top" alt="...">
         <div class="card-body">
-          <h4 class="card-title">Brian Sabaski</h4>
+          <h4 class="card-title">{{portfolio.name}}</h4>
           <p class="card-text">Estudiante de desarrollo Web</p>
-          <a href="#" class="btn"><fa-icon [icon]="faLocationDot"></fa-icon> Misiones (Argentina)</a>
+          <a href="#" class="btn"><fa-icon [icon]="faLocationDot"></fa-icon> {{portfolio.ubication}}</a>
         </div>
       </div>
       <div class="container-md"> 
@@ -13,7 +13,7 @@
           <button class="btn btn-pen"> <fa-icon [icon]="faPen"></fa-icon></button>
         </div>
         <p class="p-about">
-          Estudiante de desarrollo web
+          {{portfolio.about}}
         </p>
       </div>
 
