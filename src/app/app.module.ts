@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProgressComponent } from './components/progress/progress.component';
     HeroComponent,
     AboutComponent,
     ExperienceComponent,
-    ProgressComponent
+    ProgressComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
