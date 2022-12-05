@@ -1,0 +1,54 @@
+
+
+
+.btn {
+    background-color: #782add;
+    color: #fff;
+    padding: 10px 30px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+.btn:hover {
+    background-color: #6508df;
+    transition: ease .2s;
+}
+
+.form-check-input:focus {
+    background-color: #782add;
+}
+.form-check-input:checked {
+    background-color: #782add;
+    border: #fff;
+}
+
+
+
+.container-lg h1{
+    text-align: center;
+}
+
+.container-lg{
+    background-image: radial-gradient(circle at 50% -20.71%, #c2e8ff 0, #c8e6ff 6.25%, #cee5ff 12.5%, #d5e3ff 18.75%, #dbe1ff 25%, #e2e0ff 31.25%, #e8deff 37.5%, #eeddff 43.75%, #f4dbff 50%, #f9dafb 56.25%, #fed8f7 62.5%, #ffd7f2 68.75%, #ffd7ed 75%, #ffd6e8 81.25%, #ffd6e3 87.5%, #ffd6de 93.75%, #ffd6d9 100%);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 40%;
+    margin-top: 30px;
+    border: 2px solid #782add;
+    box-shadow: 2px 4px 8px;
+    border-radius: 15px;
+}
+
+.m-5{
+    height: 100vh;
+    align-items: center;
+}
+
+
+.emailError, .passwordError {
+    margin-left: 10px;
+    font-size: 14px;
+}

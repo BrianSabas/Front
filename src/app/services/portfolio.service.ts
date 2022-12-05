@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class PortfolioService {
 
   constructor( private http:HttpClient) { }
-
+  url:string = "http://localhost:8080/";
   getData():Observable<any> {
-    return this.http.get('./assets/data/data.json')
+    return this.http.get('this.url'+'person')
   }
 }
