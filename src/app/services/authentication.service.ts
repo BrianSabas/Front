@@ -12,7 +12,6 @@ export class AuthenticationService {
 
   url = 'http://localhost:8080/login';
   currentUserSubject:BehaviorSubject<any>;
-  token:any;
 
   constructor(private http: HttpClient) {
     console.log("The authentication service is running.")
