@@ -16,6 +16,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioService } from './services/portfolio.service';
 import { InterceptorService } from './services/interceptor.service';
+import { AddComponent } from './components/add/add.component';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { InterceptorService } from './services/interceptor.service';
     ProgressComponent,
     ProjectsComponent,
     LoginFormComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AddComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

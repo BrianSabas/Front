@@ -25,20 +25,27 @@ export class LoginFormComponent implements OnInit {
 
 
   get Email() {
-    return this.form.get('email');
-
-  }
-
-  get Password(){
-    return this.form.get('password');
-  }
-
-  onSend(event:Event) {
+    return this.form.get('email')?.value;
+    
+    }
+    
+    get Password() {
+    return this.form.get('password')?.value;
+    }
+    
+    onSend(event: Event) {
     event.preventDefault;
-    this.authenticationService.login(this.form.value).subscribe(data => {
-      console.log("DATA: " + JSON.stringify(data));
-      this.route.navigate(['/portfolio'])
-    })
+    
+    let jsonCredentials = {
+    "username": this.Email,
+    "password": this.Password
+    };
+    
+    console.log(JSON.stringify(jsonCredentials));
+    
+    this.authenticationService.login(/*this.form.value*/ jsonCredentials).subscribe(data => {
+    console.log("DATA: " + JSON.stringify(data));
+    this.route.navigate(['/portfolio']);
+    });
   }
-
 }

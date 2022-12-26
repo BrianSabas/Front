@@ -12,12 +12,12 @@
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <input type="password" class="form-control"    [ngClass]="{'is-invalid ': Password?.errors && Password?.touched, 'is-valid ': !Password?.errors && !Password?.touched }"     formControlName="password" id="exampleInputPassword1">
+      <input type="password" class="form-control"    [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid ': !Password?.errors && !Password?.touched }"     formControlName="password" id="exampleInputPassword1">
     </div>
     <div class="passwordError" *ngIf="Password?.errors && Password?.touched">
       <p *ngIf="Password?.hasError('required')" class="text-danger">Debe introducir una contraseña.</p>
       <p *ngIf="Password?.hasError('minlength')" class="text-danger">La contraseña debe tener como mínimo 8 caracteres.</p>
     </div>
-    <button type="submit" class="btn"   >Enviar</button>
+    <button type="submit" class="btn" >Enviar</button>
   </div>
   </form>
