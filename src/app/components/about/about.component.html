@@ -1,19 +1,11 @@
-<div class="container-xxl">
-    <div class="card">
-        <img [src]="portfolio.media.me" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">{{portfolio.name}}</h4>
-          <p class="card-text">Estudiante de desarrollo Web</p>
-          <a href="#" class="btn"><fa-icon [icon]="faLocationDot"></fa-icon> {{portfolio.ubication}}</a>
-        </div>
-      </div>
+<div class="container-xxl">   
       <div class="container-md"> 
       <div class="h2-about">
           <h2>Acerca de</h2>
           <button class="btn btn-pen" (click)="onClick()"> <fa-icon [icon]="faPen"></fa-icon></button>
         </div>
-        <p class="p-about" *ngFor="let info of list">
-          {{info.aboutMe}}
+        <p class="p-about" *ngFor="let item of list">
+          {{item.aboutMe}}
         </p>
       </div>
 

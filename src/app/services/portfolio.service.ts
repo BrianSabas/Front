@@ -10,7 +10,7 @@ export class PortfolioService {
   constructor( private http:HttpClient) { }
   url:string = "http://localhost:8080/";
   getData():Observable<any> {
-    return this.http.get(this.url + "get/persons")
+    return this.http.get(this.url)
 
   }
 }

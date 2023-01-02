@@ -18,6 +18,7 @@ import { PortfolioService } from './services/portfolio.service';
 import { InterceptorService } from './services/interceptor.service';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
+import { PersonComponent } from './components/person/person.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { EditComponent } from './components/edit/edit.component';
     PortfolioComponent,
     AddComponent,
     EditComponent,
+    PersonComponent,
   ],
   imports: [
     BrowserModule,

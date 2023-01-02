@@ -2,6 +2,9 @@
 
 .container-xxl {
     height: 285px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .card{
@@ -26,11 +29,10 @@
 
 
 .container-md {
-    float: right;
-    position: absolute;
-    top: 97vh;
-    right: 14px;
-    width: 55vw;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
     height: 20vh;
     border: 2px solid rgba(87, 87, 87, 0.267);
     border-radius: 15px;
