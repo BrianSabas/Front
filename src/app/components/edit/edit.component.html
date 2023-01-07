@@ -1,1 +1,7 @@
-<p>edit works!</p>
+<div class="container">
+    <form action="">
+        <label for="about">About Me</label>
+        <input type="text" id="about" name="about" [(ngModel)]="editAbout.aboutMe">
+    </form>
+    <button class="btn btn-success" (click)="save()">Guardar</button>
+</div>

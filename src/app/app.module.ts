@@ -13,7 +13,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioService } from './services/portfolio.service';
 import { InterceptorService } from './services/interceptor.service';
 import { AddComponent } from './components/add/add.component';
@@ -40,7 +40,8 @@ import { PersonComponent } from './components/person/person.component';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [PortfolioService, {
     provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true

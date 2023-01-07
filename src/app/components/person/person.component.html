@@ -1,9 +1,8 @@
-<div class="container-md">
-<div class="card" *ngFor=" let item of portfolio">
-    <img [src]="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h4 class="card-title">{{item.name}}</h4>
-      <p class="card-text">{{item.aboutMe}}</p>
-      <a href="#" class="btn"><fa-icon [icon]="faLocationDot"></fa-icon>Leandro N. Alem, Misiones</a>
+<div class="col-6">
+<div class="col-md-4 card">
+    <img src="../assets/me.jpg" class="card-img-top" alt="">
+    <div class="card-body" *ngFor="let item of list">
+      <h4 class="card-title">{{item.name +  ' ' +item.surname}}</h4>
+      <a href="#" class="btn"><fa-icon [icon]="faLocationDot"></fa-icon>{{item.domicile.localidad + " Misiones" }}</a>
     </div>
 </div>

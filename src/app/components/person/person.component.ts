@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { PersonService } from 'src/app/services/person.service';
 
 
 @Component({
@@ -10,9 +11,10 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 })
 export class PersonComponent implements OnInit {
 
-portfolio:any;
+portfolio:any = [];
 
-  constructor(private portfolioData: PortfolioService) { }
+list:any = [];
+  constructor(private portfolioData: PortfolioService, private personService: PersonService) { }
 
   ngOnInit(): void {
   
@@ -20,8 +22,22 @@ portfolio:any;
       console.log(data);
       this.portfolio=data;
       });
+      this.getPerson();
   }
 
 
+  getPerson(){
+    this.personService.getPerson().subscribe(
+      {
+        next:res=>{
+          this.list=res;
+          console.log(res);
+        },
+      error:  err=>{
+        console.log(err)
+      }
+    });
+  }
+ 
   faLocationDot = faLocationDot;
 }

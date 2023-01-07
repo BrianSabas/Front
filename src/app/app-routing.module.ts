@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'login-form', component:LoginFormComponent},
   {path:'', redirectTo:'login-form', pathMatch:'full'},
   {path:'add', component:AddComponent},
-  {path:'edit', component:EditComponent}
+  {path:'edit/:id', component:EditComponent}
 
 ];
 

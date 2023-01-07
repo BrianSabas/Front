@@ -1,10 +1,10 @@
-<div class="container-xxl">   
-      <div class="container-md"> 
+<div class="col-6 col-md-4">   
+      <div class="container-md" *ngFor="let item of list"> 
       <div class="h2-about">
           <h2>Acerca de</h2>
-          <button class="btn btn-pen" (click)="onClick()"> <fa-icon [icon]="faPen"></fa-icon></button>
+          <button class="btn btn-pen" [routerLink]="['/edit', item.id]"> <fa-icon [icon]="faPen"></fa-icon></button>
         </div>
-        <p class="p-about" *ngFor="let item of list">
+        <p class="p-about" >
           {{item.aboutMe}}
         </p>
       </div>

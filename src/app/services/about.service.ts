@@ -22,18 +22,18 @@ export class AboutService {
     return this.http.post(this.url, about);
   }
 
-  editAbout(about: About):Observable<any> {
-    return this.http.put(this.url, about);
+  editAbout(about: About, id:string):Observable<any> {
+    return this.http.put(this.url+'/' +id, about);
   }
 }
 
 
 export interface About {
-  Id:Number;
-  Name:String;
-  Surname:String;
-  Tel:String;
-  AboutMe:String;
-  Email:String;
-  Domicile:String;
+  id:String;
+  name:String;
+  surname:String;
+  tel:String;
+  aboutMe:String;
+  email:String;
+  domicile:String;
 }
