@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 export class PersonService {
 
 
-  url = 'http://localhost:8080/get/persons';
+  url = 'http://localhost:8080/api/person/';
   constructor(private http: HttpClient) { }
 
   getPerson():Observable<any>{
-    return this.http.get(this.url)
+    return this.http.get(this.url + "all")
   }
 
   savePerson(person: Person):Observable<any> {

@@ -12,7 +12,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class AboutComponent implements OnInit {
 
-
+  id:string = "";
   list:any=[];
   constructor(private portfolioData: PortfolioService, private aboutService:AboutService) { }
 

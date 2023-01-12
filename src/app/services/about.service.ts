@@ -9,21 +9,25 @@ import { Observable } from 'rxjs';
 export class AboutService {
 
 
-  url = 'http://localhost:8080/get/persons';
+  url = 'http://localhost:8080/';
   constructor(private http: HttpClient) { }
 
 
 
   getAbout():Observable<any> {
-    return this.http.get(this.url);
+    return this.http.get(this.url + 'api/person/all' );
   }
 
+  getAboutById(id: string):Observable<any> {
+    return this.http.get(this.url + 'api/person/' + id)
+  };
+
   saveAbout(about: About):Observable<any>{
-    return this.http.post(this.url, about);
+    return this.http.post(this.url + 'api/person', about);
   }
 
   editAbout(about: About, id:string):Observable<any> {
-    return this.http.put(this.url+'/' +id, about);
+    return this.http.put(this.url+ 'api/person/' +id, about.aboutMe);
   }
 }
 

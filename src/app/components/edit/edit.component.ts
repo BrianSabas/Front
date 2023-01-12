@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { TagContentType } from '@angular/compiler';
+import { Component, OnInit, Type } from '@angular/core';
+import { FormGroup, FormBuilder, Form} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { About, AboutService } from 'src/app/services/about.service';
 
@@ -9,32 +12,51 @@ import { About, AboutService } from 'src/app/services/about.service';
 })
 export class EditComponent implements OnInit {
 
+form:FormGroup
+
   id:string = "";
-  editAbout:About = {id:'', name:"", surname:"", tel:"", aboutMe:"", email:"", domicile:""};
+  about:About = {id:'', name:"", surname:"", tel:"", aboutMe:"", email:"", domicile:""};
 
   constructor(private aboutSvc: AboutService, 
     private router: Router, 
-    private activatedRouter: ActivatedRoute) { }
+    private activatedRouter: ActivatedRoute,
+    private formBuilder: FormBuilder ) { 
+      this.form = this.formBuilder.group({
+        about:['']
+      })
+    }
+
+
+
 
   ngOnInit(): void {
     this.id = this.activatedRouter.snapshot.params['id'];
-    this.aboutSvc.getAbout().subscribe(
+    this.aboutSvc.getAboutById(this.id).subscribe(
       {next:res=>{
-        this.editAbout = res;
+        this.about = res; 
       },
       error: err=> {console.log(err)}
     
     });
   }
 
+ get data() {
+  return this.form.get('about')?.value;
+ }
+
   save() {
-    this.aboutSvc.editAbout(this.editAbout, this.id).subscribe(
+    let data = {
+      "aboutMe":this.about
+    }
+
+    this.aboutSvc.editAbout(this.about, this.id).subscribe(
       {next:res=>{
-        this.router.navigate(['/portfolio'])
-      },
+        res = this.router.navigate(['/portfolio'])
+        data;
+            },
       error: err=> {console.log(err)}
-    
     });
+ 
   }
 
 } 
