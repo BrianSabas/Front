@@ -9,17 +9,17 @@ import { Observable } from 'rxjs';
 export class AboutService {
 
 
-  url = 'http://localhost:8080/';
+  url:string = 'http://localhost:8080/';
   constructor(private http: HttpClient) { }
 
 
 
   getAbout():Observable<any> {
-    return this.http.get(this.url + 'api/person/all' );
+    return this.http.get( this.url + 'api/person/all' );
   }
 
   getAboutById(id: string):Observable<any> {
-    return this.http.get(this.url + 'api/person/' + id)
+    return this.http.get( this.url + 'api/person/' + id)
   };
 
   saveAbout(about: About):Observable<any>{
@@ -27,7 +27,7 @@ export class AboutService {
   }
 
   editAbout(about: About, id:string):Observable<any> {
-    return this.http.put(this.url+ 'api/person/' +id, about.aboutMe);
+    return this.http.put(this.url+ 'api/person/' +id, about);
   }
 }
 
@@ -39,5 +39,6 @@ export interface About {
   tel:String;
   aboutMe:String;
   email:String;
-  domicile:String;
+  localidad:String;
+  address:String;
 }

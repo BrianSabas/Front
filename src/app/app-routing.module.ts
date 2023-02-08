@@ -8,6 +8,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { GuardGuard } from './services/guard.guard';
 
 const routes: Routes = [
+  {path:'portfolio/:id', component:PortfolioComponent, canActivate:[GuardGuard]},
   {path:'portfolio', component:PortfolioComponent, canActivate:[GuardGuard]},
   {path:'login-form', component:LoginFormComponent},
   {path:'', redirectTo:'login-form', pathMatch:'full'},

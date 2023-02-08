@@ -1,0 +1,21 @@
+.container-xxl {
+    background-color: rgb(195, 224, 250);
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input {
+    margin: 20px 0;
+    border-radius: 6px;
+}
+

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject,  Observable } from 'rxjs';
+import { BehaviorSubject,  identity,  Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 
@@ -23,10 +23,18 @@ export class AuthenticationService {
     return this.http.post(this.url, credentials).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
+      console.log(this.userId)
     }))
+    
+   }
+
+   get userId(){
+    return this.AuthenticatedUser.userId;
    }
 
    get AuthenticatedUser() {
     return this.currentUserSubject.value;
    }
+
+
 }

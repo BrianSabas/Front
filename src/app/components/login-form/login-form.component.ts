@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
@@ -33,6 +34,7 @@ export class LoginFormComponent implements OnInit {
     return this.form.get('password')?.value;
     }
     
+
     onSend(event: Event) {
     event.preventDefault;
     
@@ -42,10 +44,10 @@ export class LoginFormComponent implements OnInit {
     };
     
     console.log(JSON.stringify(jsonCredentials));
-    
     this.authenticationService.login(/*this.form.value*/ jsonCredentials).subscribe(data => {
     console.log("DATA: " + JSON.stringify(data));
-    this.route.navigate(['/portfolio']);
-    });
+    this.route.navigate([`/portfolio/${this.authenticationService.AuthenticatedUser.userId}`]);
+    
+  });
   }
 }
