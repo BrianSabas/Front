@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
@@ -25,26 +26,72 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {  
     this.id = this.activatedRoute.snapshot.params['id']
-    this.portfolioData.getData().subscribe(data => {
-      this.list=data;
-      });
     this.getAbout();
     }
 
- getAbout(){
-    this.aboutService.getAboutById(this.id).subscribe(
-      {
-        next:res=>{
-          this.list[0]=res;
-          console.log(res);
-        },
-      error:  err=>{
-        console.log(err)
-      }
-    });
-    
-  }
 
+    aboutForm = new FormGroup({
+      aboutMe: new FormControl('')
+    })
+
+
+
+    getAbout(){
+      this.aboutService.getAbout().subscribe(res =>{
+        this.list = res;
+          })
+     }
+
+
+    // getAbout(){
+    //   this.activatedRoute.params.subscribe(
+    //     res=>{
+    //       this.aboutService.getAboutById(this.id)
+    //       this.list[0] = res
+    //     }
+    //     )
+    //     let id = this.activatedRoute.snapshot.params['id']
+    //     if (id){ 
+    //       this.aboutService.getAboutById(id).subscribe(res=>{
+    //         this.list[0] = res
+    //       })
+    //     }
+    // }
+
+
+    // getAbout() {
+    //   this.activatedRoute.params.subscribe(
+    //     res=>{
+    //       let about = this.about;
+    //       let id = this.activatedRoute.snapshot.params['id']
+    //       this.list[0]=res;
+
+    //       console.log("LAAAAAAAAAAAAAA", res)
+    //       if(id){
+    //         this.aboutService.getAboutById(id).subscribe(
+    //           res=>this.about=res
+    //           )
+    //       }
+    //     })
+
+    //   }
+
+
+
+//  getAbout(){
+//     this.aboutService.getAboutById(this.id).subscribe(
+
+//       {
+//         next:res=>{
+//         this.list[0]=res;
+//         console.log("JAAAAA",res);
+//         },
+//       error:  err=>{
+//         console.log(err)
+//       }
+//     });
+//     let id = this.activatedRoute.snapshot.params['id']
+//     }
 
 
 

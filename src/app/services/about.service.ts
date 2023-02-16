@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,8 +19,8 @@ export class AboutService {
     return this.http.get( this.url + 'api/person/all' );
   }
 
-  getAboutById(id: string):Observable<any> {
-    return this.http.get( this.url + 'api/person/' + id)
+  getAboutById(id: string):Observable<About> {
+    return this.http.get<About>( this.url + 'api/person/' + id)
   };
 
   saveAbout(about: About):Observable<any>{

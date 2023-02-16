@@ -12,9 +12,9 @@ export class ProjectsComponent implements OnInit {
   constructor(private portfolioData:PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioData.getData().subscribe(data => {
-      this.portfolio=data;
-    })
+    // this.portfolioData.getData().subscribe(data => {
+    //   this.portfolio=data;
+    // })
   }
   
   portfolio:any;

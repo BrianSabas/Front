@@ -20,7 +20,8 @@
 
 .h2-experience, .h2-education {
     height: fit-content;
-    margin-top: .5rem;
+    margin-top: .7rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
 
@@ -30,8 +31,19 @@
     display: flex;  
     align-items: center;
     justify-content: space-between;
-    text-align: center;
+
 }
+
+.actualJob {
+    width: max-content;
+    box-shadow: -9px 8px 21px -7px rgba(120,120,120,0.85);
+    -webkit-box-shadow: -9px 8px 21px -7px rgba(120,120,120,0.85);
+    -moz-box-shadow: -9px 8px 21px -7px rgba(120,120,120,0.85);
+    text-shadow: -7px 3px 10px rgba(255,255,255,0.67);
+    background: rgb(189,206,237);
+    background: linear-gradient(0deg, rgba(189,206,237,1) 6%, rgba(186,150,255,1) 56%);
+}
+
 .image {
     display: flex;
     flex-direction: column;

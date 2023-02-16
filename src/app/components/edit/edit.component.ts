@@ -12,7 +12,8 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class EditComponent implements OnInit {
 
 form:FormGroup
-
+  list:any = [];
+  lista:any=[];
   id = '';
   about:About = {id:'', name:"", surname:"", tel:"", aboutMe:"", email:"", localidad:"", address:""};
 
@@ -20,7 +21,7 @@ form:FormGroup
     private router: Router, 
     private activatedRouter: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private authService:AuthenticationService ) { 
+    private aboutService:AboutService ) { 
       this.form = this.formBuilder.group({
         about:['']
       })
@@ -31,19 +32,31 @@ form:FormGroup
 
   ngOnInit(): void {
       this.id = this.activatedRouter.snapshot.params['id'];
-    this.aboutSvc.getAboutById(this.id).subscribe(
-      {next:res=>{
-        this.about = res; 
-        console.log(res)
-      },
-      error: err=> {console.log( err)}
-    
-    });
+      this.getAbout()
   }
 
  get aboutData() {
   return this.form.get('about')?.value;
  }
+
+
+
+
+ getAbout(){
+  this.activatedRouter.params.subscribe(
+  
+    res=>{
+      console.log(res)
+      this.list[0]=res;
+      let id = res['id'];
+      if(id){
+        this.aboutService.getAboutById(id).subscribe(
+          resp=>this.about=resp
+          )
+          console.log(this.about)
+      }
+    })
+  }
 
   save() {
     let data = {
@@ -58,6 +71,7 @@ form:FormGroup
 
     }
 
+
     this.aboutSvc.editAbout(this.about, this.id).subscribe(
       {next:res=>{
         res = this.router.navigate(['/portfolio/' + this.id])
@@ -67,5 +81,6 @@ form:FormGroup
     });
  
   }
+
 
 } 

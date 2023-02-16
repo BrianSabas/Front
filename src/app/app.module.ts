@@ -16,9 +16,10 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioService } from './services/portfolio.service';
 import { InterceptorService } from './services/interceptor.service';
-import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
 import { PersonComponent } from './components/person/person.component';
+import { AddComponent } from './components/experience/add/add.component';
+import { DeleteComponent } from './components/experience/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import { PersonComponent } from './components/person/person.component';
     ProjectsComponent,
     LoginFormComponent,
     PortfolioComponent,
-    AddComponent,
     EditComponent,
     PersonComponent,
+    AddComponent,
+    DeleteComponent,
   ],
   imports: [
     BrowserModule,

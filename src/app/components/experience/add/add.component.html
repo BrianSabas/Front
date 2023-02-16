@@ -1,0 +1,24 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+          <label for="trabajoActual">Trabajo Actual</label>
+          <input type="text" class="form-control" name="trabajoActual" id="trabajoActual" [(ngModel)]="experience.trabajoActual" placeholder="Nombre del trabajo actual">
+        </div>
+        <div class="form-group">
+          <label for="nombreEmpresa">Nombre de la Empresa</label>
+          <input type="text" class="form-control" name="nombreEmpresa" id="nombreEmpresa" [(ngModel)]="experience.nombreEmpresa" placeholder="ejemplo: Corporation Capsula">
+        </div>
+        <div class="form-group">
+            <label for="fechaInicio">Fecha de inicio</label>
+            <input type="text" class="form-control" name="fechaInicio" id="fechaInicio"  [(ngModel)]="experience.fechaInicio" placeholder="Fecha que empezaste en ese trabajo">
+          </div>
+          <div class="form-group">
+            <label for="fechaFin">Fecha de fin</label>
+            <input type="text" class="form-control" name="fechaFin" id="fechaFin"   [(ngModel)]="experience.fechaFin"  placeholder="Fecha que finalizaste en ese trabajo">
+          </div>
+
+          <button class="btn btn-primary" (click)="saveExperience()">Guardar</button>
+        </form>
+
+</div>
+  
