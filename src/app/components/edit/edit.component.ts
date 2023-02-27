@@ -59,23 +59,23 @@ form:FormGroup
   }
 
   save() {
-    let data = {
-      "id": this.about.id,
-      "name": this.about.name,
-      "surname": this.about.surname,
-      "tel": this.about.tel,
-      "aboutMe": this.about.aboutMe,
-      "email": this.about.email,
-      "localidad": this.about.localidad,
-      "address": this.about.address
+    // let data = {
+    //   "id": this.about.id,
+    //   "name": this.about.name,
+    //   "surname": this.about.surname,
+    //   "tel": this.about.tel,
+    //   "aboutMe": this.about.aboutMe,
+    //   "email": this.about.email,
+    //   "localidad": this.about.localidad,
+    //   "address": this.about.address
 
-    }
+    // }
 
 
     this.aboutSvc.editAbout(this.about, this.id).subscribe(
       {next:res=>{
         res = this.router.navigate(['/portfolio/' + this.id])
-        data;
+        // data;
             },
       error: err=> {console.log(err)}
     });

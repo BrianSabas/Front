@@ -6,31 +6,19 @@
 
     <div class="container-lg progress-container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="progress-title">
-                    <h4>HTML</h4>
+            <div class="col-md-12" *ngFor="let item of list">
+                <div class="progress-title" >
+                    <h4>{{item.name}}</h4>
                     <div class="btns">
                         <button class="btn btn-pen"> <fa-icon [icon]="faPen"></fa-icon></button>
                         <button class="btn btn-trash"> <fa-icon [icon]="faTrash"></fa-icon></button>
                     </div>
                 </div>
-                    <div class="progress progressFirst">
+                    <div class="progress progressFirst" >
                         <div class="progress-bar" style="width:80%; background: #700cce;">
-                            <div class="progress-value">80%</div>
+                            <div class="progress-value">{{item.porcentaje}}%</div>
                           </div>
                     </div>
-                    <div class="progress-title">
-                        <h4>CSS3</h4>
-                        <div class="btns">
-                            <button class="btn btn-pen"> <fa-icon [icon]="faPen"></fa-icon></button>
-                            <button class="btn btn-trash"> <fa-icon [icon]="faTrash"></fa-icon></button>
-                        </div>
-                    </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:65%; background: #700cce;">
-                                <div class="progress-value">65%</div>
-                              </div>
-                        </div>
             </div>
         </div>
 

@@ -1,5 +1,8 @@
 
 
+input::placeholder{
+    color: #979595;
+}
 
 .btn {
     background-color: #782add;
@@ -52,3 +55,4 @@
     margin-left: 10px;
     font-size: 14px;
 }
+

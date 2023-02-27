@@ -19,7 +19,7 @@ import { InterceptorService } from './services/interceptor.service';
 import { EditComponent } from './components/edit/edit.component';
 import { PersonComponent } from './components/person/person.component';
 import { AddComponent } from './components/experience/add/add.component';
-import { DeleteComponent } from './components/experience/delete/delete.component';
+import { AddEducationComponent } from './components/experience/add-education/add-education.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { DeleteComponent } from './components/experience/delete/delete.component
     EditComponent,
     PersonComponent,
     AddComponent,
-    DeleteComponent,
+    AddEducationComponent,
   ],
   imports: [
     BrowserModule,

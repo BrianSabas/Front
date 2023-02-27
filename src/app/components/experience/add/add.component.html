@@ -16,8 +16,10 @@
             <label for="fechaFin">Fecha de fin</label>
             <input type="text" class="form-control" name="fechaFin" id="fechaFin"   [(ngModel)]="experience.fechaFin"  placeholder="Fecha que finalizaste en ese trabajo">
           </div>
-
-          <button class="btn btn-primary" (click)="saveExperience()">Guardar</button>
+          <div class="btns">
+            <button class="btn btn-primary" (click)="saveExperience()">Agregar</button>
+            <button class="btn btn-success" (click)="updateExperience()">Guardar edición</button>
+          </div>
         </form>
 
 </div>
