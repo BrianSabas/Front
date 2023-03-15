@@ -23,7 +23,6 @@ export class AuthenticationService {
     return this.http.post(this.url, credentials).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
-      console.log(this.userId)
     }))
     
    }

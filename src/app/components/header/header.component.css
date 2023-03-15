@@ -6,6 +6,18 @@
     max-width: 3rem;
 }
 
+.fa-github {
+    height: 21px;
+    color: #000;
+    margin-right: 5px;
+
+}
+
+.fa-github:hover {
+    color: #6f13d8;
+    transition: ease ;
+}
+
 .nav-link {
     font-weight: 500;
 }
@@ -24,4 +36,32 @@
 .btn:hover {
     border: 1px solid #6f13d8;
     color: #6f13d8;
+}
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #292828;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    padding: 3px 20px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #ffffff;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+    
+}
+
+[data-title] {
+    position: relative;
 }

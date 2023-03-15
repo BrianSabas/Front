@@ -18,6 +18,10 @@
 
 }
 
+.actualJob{
+    color: #700cce;
+}
+
 .h2-experience, .h2-education {
     text-shadow: -7px 3px 10px rgba(150, 149, 149, 0.67);
     height: fit-content;
@@ -37,7 +41,6 @@
 }
 
 
-
 .actualJob {
     width: max-content;
     /* box-shadow: -9px 8px 21px -7px rgba(120,120,120,0.85);
@@ -52,18 +55,6 @@
 }
 
 
-.borderr{
-    background: rgb(189,206,237);
-    background: linear-gradient(0deg, rgba(189,206,237,1) 0%, rgba(202,173,255,1) 54%);
-    display: flex;
-    flex-direction: column;
-    min-width: min-content;
-    width: 30%;
-    border: 2px solid #7f63ff;
-    border-radius: 10px;
-    border-style: inset;
-    padding: 2px;
-}
 
 
 .image {
@@ -76,8 +67,48 @@
     margin-top:  5rem;
 }
 
+.finished-career, .finished-school, .initial-and-final-date{
+    color: #474646;
+}
+
+.h4-school, .h4-career {
+    color:#700cce;
+}
+
+button:hover{
+    color: #700cce;
+}
 
 img {
     width: 60px; 
     margin-right: .10rem;
+}
+
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #292828;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    padding: 3px 20px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #ffffff;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+    
+}
+
+[data-title] {
+    position: relative;
 }

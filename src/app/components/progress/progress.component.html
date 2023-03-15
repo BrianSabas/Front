@@ -1,7 +1,7 @@
-<div class="container-xxl">
+<div class="container-xxl ">
     <div class="h2-title">
         <h2>Hard Skills & Soft Skills</h2>
-        <button class="btn btn-add"> <fa-icon [icon]="faAdd"></fa-icon></button>
+        <button class="btn btn-add" [routerLink]="['/add-progress', id]"> <fa-icon [icon]="faAdd"></fa-icon></button>
     </div>
 
     <div class="container-lg progress-container">
@@ -10,18 +10,18 @@
                 <div class="progress-title" >
                     <h4>{{item.name}}</h4>
                     <div class="btns">
-                        <button class="btn btn-pen"> <fa-icon [icon]="faPen"></fa-icon></button>
-                        <button class="btn btn-trash"> <fa-icon [icon]="faTrash"></fa-icon></button>
+                        <button class="btn btn-pen" [routerLink]="['/add-progress', item.id]"> <fa-icon [icon]="faPen"></fa-icon></button>
+                        <button class="btn btn-trash" (click)="deleteTechno(item.id)"> <fa-icon [icon]="faTrash"></fa-icon></button>
                     </div>
                 </div>
                     <div class="progress progressFirst" >
-                        <div class="progress-bar" style="width:80%; background: #700cce;">
+                        <div class="progress-bar"   [style.width.%]="item.porcentaje" style="background: #700cce;">
                             <div class="progress-value">{{item.porcentaje}}%</div>
                           </div>
                     </div>
             </div>
         </div>
-
+        
     </div>
 
 </div>

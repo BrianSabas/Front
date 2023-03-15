@@ -16,39 +16,46 @@ export class LoginFormComponent implements OnInit {
     this.form = this.formBuilder.group(
       {
         email:['', [Validators.required, Validators.email]],
-        password:['', [Validators.required, Validators.minLength(8)]]
+        password:['', [Validators.required, Validators.minLength(8), Validators.maxLength(24)]]
       }
       );
    }
 
   ngOnInit(): void {
-    
+
   }
 
 
-  get Email() {
-    return this.form.get('email')?.value;
+    get Email() {
+    return this.form.get('email');
     
     }
+  
     
     get Password() {
-    return this.form.get('password')?.value;
+    return this.form.get('password');
     }
     
+    
+
 
     onSend(event: Event) {
     event.preventDefault;
     
     let jsonCredentials = {
-    "username": this.Email,
-    "password": this.Password
+    "username": this.Email?.value,
+    "password": this.Password?.value
     };
     
-    console.log(JSON.stringify(jsonCredentials));
-    this.authenticationService.login(/*this.form.value*/ jsonCredentials).subscribe(data => {
-    console.log("DATA: " + JSON.stringify(data));
-    this.route.navigate([`/portfolio/${this.authenticationService.AuthenticatedUser.userId}`]);
+    if(this.form.valid) {
+      console.log(JSON.stringify(jsonCredentials));
+      this.authenticationService.login(/*this.form.value*/ jsonCredentials).subscribe(data => {
+      console.log("DATA: " + JSON.stringify(data));
+      this.route.navigate([`/portfolio/${this.authenticationService.AuthenticatedUser.userId}`]);
     
   });
+    }else{
+      alert('Debe escribir un formulario válido')
+    }
   }
 }

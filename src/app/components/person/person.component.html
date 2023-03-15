@@ -3,6 +3,6 @@
     <img src="../assets/me.jpg" class="card-img-top" alt="">
     <div class="card-body" *ngFor="let item of list">
       <h4 class="card-title">{{item.name +  ' ' +item.surname}}</h4>
-      <a href="#" class="btn"><fa-icon [icon]="faLocationDot"></fa-icon>{{item.domicile.localidad + " Misiones" }}</a>
+      <p class="btn"><fa-icon [icon]="faLocationDot"></fa-icon>{{item.domicile.localidad + " Misiones" }}</p>
     </div>
 </div>

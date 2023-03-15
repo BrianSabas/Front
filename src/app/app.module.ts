@@ -20,6 +20,8 @@ import { EditComponent } from './components/edit/edit.component';
 import { PersonComponent } from './components/person/person.component';
 import { AddComponent } from './components/experience/add/add.component';
 import { AddEducationComponent } from './components/experience/add-education/add-education.component';
+import { AddProgressComponent } from './components/progress/add-progress/add-progress.component';
+import { AddProjectComponent } from './components/projects/add-project/add-project.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { AddEducationComponent } from './components/experience/add-education/add
     PersonComponent,
     AddComponent,
     AddEducationComponent,
+    AddProgressComponent,
+    AddProjectComponent,
   ],
   imports: [
     BrowserModule,

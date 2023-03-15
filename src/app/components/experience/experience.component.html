@@ -7,11 +7,11 @@
         <div class="img-programmer" *ngFor="let item of list">
            <div class="borderr"> 
                
-               <h4 class="actualJob">
+               <h3 class="actualJob" style="color:#700cce">
                 <img src="../../../assets/programmer.svg" alt="">
-                {{item.trabajoActual}} </h4>
-            <p> <b> {{item.nombreEmpresa}}</b>
-            ({{item.fechaInicio}} - {{item.fechaFin}})</p>
+                {{item.trabajoActual}} </h3>
+            <p class="ml-2"> <b> {{item.nombreEmpresa}}</b>
+            <span class="initial-and-final-date"> ({{item.fechaInicio}} - {{item.fechaFin}})</span></p>
         </div>
             <div class="btns" >
                 <button class="btn btn-pen" [routerLink]="['/add-experience', item.id]" > <fa-icon [icon]="faPen"></fa-icon></button>
@@ -35,20 +35,20 @@
         </div>
         <div class="img-school" *ngFor="let list of listEducation"> 
             <div class="image"> 
-        <h4 >
+        <h3 class="h4-school" >
             <img class="image-school" src="../../../assets/school.svg" alt="school-logo">
             {{list.highSchoolName}} 
-        </h4>
-            <p > Fecha de finalización: {{list.highSchoolFinished}}</p>
-            <h4 class="" *ngIf="list.careerName !== null">
+        </h3>
+            <p  class="finished-school" > Fecha de finalización: {{list.highSchoolFinished}}</p>
+            <h3 class="h4-career">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Harvard_University_shield.png" alt="university-logo">
                 {{list.careerName}} 
-            </h4>
-            <p class="mb-sm-5"> Fecha de finalización: {{list.careerFinished}}</p>
+            </h3>
+            <p class="mb-sm-5 finished-career"> Fecha de finalización: {{list.careerFinished}}</p>
         </div>
         
         <div class="btns">
-            <button class="btn btn-pen"> <fa-icon [icon]="faPen" [routerLink]="['/add-education', list.id]"></fa-icon></button>
+            <button class="btn btn-pen" > <fa-icon [icon]="faPen"  [routerLink]="['/add-education', list.id]"></fa-icon></button>
             <button class="btn btn-trash" (click)="deleteEducation(list.id)"> <fa-icon [icon]="faTrash"></fa-icon></button>
         </div>
     </div>

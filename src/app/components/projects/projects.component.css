@@ -22,6 +22,8 @@
     word-wrap: break-word;
 }
 
+
+
 a {
     color: #5f02c9;
    text-decoration: none;
@@ -32,6 +34,11 @@ a {
 a:hover {
     color: rgb(152, 62, 255);
 }
+
+button:hover {
+    color: #700cce;
+}
+
 
 p {
     color: #818181;

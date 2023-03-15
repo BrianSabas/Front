@@ -34,9 +34,19 @@ export class ProgressComponent implements OnInit {
         console.log(err)
       }
     })
+    
   }
 
-
+  deleteTechno(id:string){
+    this.technologyService.deleteTechnology(id).subscribe({
+      next:res=>{
+       this.ngOnInit()
+      },
+      error: err=>{
+        console.log(err)
+      }
+    })
+  }
 
 
   faPen = faPen;

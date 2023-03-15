@@ -6,6 +6,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AddComponent } from './components/experience/add/add.component';
 import { AddEducationComponent } from './components/experience/add-education/add-education.component';
+import { AddProgressComponent } from './components/progress/add-progress/add-progress.component';
+import { AddProjectComponent } from './components/projects/add-project/add-project.component';
+
 import { GuardGuard } from './services/guard.guard';
 
 const routes: Routes = [
@@ -15,6 +18,8 @@ const routes: Routes = [
   {path:'', redirectTo:'login-form', pathMatch:'full'},
   {path:'add-experience/:id', component:AddComponent},
   {path:'add-education/:id', component:AddEducationComponent},
+  {path:'add-progress/:id', component:AddProgressComponent},
+  {path:'add-project/:id', component:AddProjectComponent},
   {path:'edit/:id', component:EditComponent}
 
 ];

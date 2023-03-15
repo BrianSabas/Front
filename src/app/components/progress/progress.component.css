@@ -1,9 +1,10 @@
 .container-xxl {
-    height: 340px;
+    margin-top: 2rem;
+    height: max-content;
     width: 97%;
     border: 2px #8d8d8d6b solid;
     border-radius: 2rem;
-    margin-top: 2rem;
+    padding-bottom: 2%;
 }
 
 .h2-title {
@@ -50,4 +51,7 @@
     margin-bottom: 1rem;
 }
 
+button:hover {
+    color: #700cce;
+}
 
