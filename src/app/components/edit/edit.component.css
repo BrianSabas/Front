@@ -14,8 +14,8 @@ input {
 .container-xxl {
     background-color: rgb(195, 224, 250);
     border: 1px solid #000;
-    width: 300px;
-    height: 300px;
+    width: 35vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
