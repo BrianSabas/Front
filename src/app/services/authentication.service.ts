@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class AuthenticationService {
 
 
-  url = 'http://localhost:8080/api/auth/login';
+  url = 'https://residential-carlin-briansabas.koyeb.app/api/auth/login';
   currentUserSubject:BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {
