@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class AboutService {
 
 
-  url:string = 'http://localhost:8080/';
+  url:string = 'https://residential-carlin-briansabas.koyeb.app/';
   constructor(private http: HttpClient) { }
 
 

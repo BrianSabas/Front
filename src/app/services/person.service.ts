@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class PersonService {
 
 
-  url = 'http://localhost:8080/api/person/';
+  url = 'https://residential-carlin-briansabas.koyeb.app/api/person/';
   constructor(private http: HttpClient) { }
 
   getPerson():Observable<any>{

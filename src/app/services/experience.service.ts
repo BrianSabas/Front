@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ExperienceService {
 
-  url = 'http://localhost:8080/api/experience/' ;
+  url = 'https://residential-carlin-briansabas.koyeb.app/api/experience/' ;
   experience:Experience;
 
   constructor( private http: HttpClient) { 

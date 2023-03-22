@@ -10,7 +10,7 @@ export class PortfolioService {
 
   id = this.authService.AuthenticatedUser.userId;
   constructor( private http:HttpClient, private authService:AuthenticationService, httpClient: HttpClient) { }
-  url:string = "http://localhost:8080/api/person/";
+  url:string = "https://residential-carlin-briansabas.koyeb.app/api/person/";
   getData():Observable<any> {
     return this.http.get(this.url)
   }

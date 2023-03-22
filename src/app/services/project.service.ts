@@ -8,7 +8,7 @@ import { Project } from 'src/models/project.model';
 })
 export class ProjectService {
 
-  url = 'http://localhost:8080/api/project/';
+  url = 'https://residential-carlin-briansabas.koyeb.app/api/project/';
   project:Project;
 
 

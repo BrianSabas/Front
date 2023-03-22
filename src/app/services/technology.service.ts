@@ -8,7 +8,7 @@ import { Technology } from 'src/models/technology.model';
 })
 export class TechnologyService {
   
-  url = 'http://localhost:8080/api/technology/'
+  url = 'https://residential-carlin-briansabas.koyeb.app/api/technology/'
   technology:Technology;
 
   constructor(private http:HttpClient) {
